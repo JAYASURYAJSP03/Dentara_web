@@ -533,4 +533,62 @@ footer {
   .map-section {
     padding: 40px 0;
   }
+
+}
+
+
+/* Add this to your existing CSS */
+.nav-toggle {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: block; /* Show only on mobile */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  nav {
+    position: relative;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 15px;
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .logo {
+    order: -1; /* Ensures logo stays on left */
+    flex: 1;
+  }
+  
+  .cta-button {
+    width: 100%;
+    margin-top: 15px;
+    order: 1;
+  }
 }
